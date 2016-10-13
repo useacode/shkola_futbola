@@ -400,7 +400,7 @@ footer .phone {
 }
 @media screen and (max-width: 992px){
     .main-h1 h1 {
-        font-size: 36px;
+        font-size: 34px;
         line-height: 39px;
     }
 }
@@ -559,7 +559,7 @@ footer .phone {
 
 @media screen and (max-width: 450px){
     .top-text h2{
-        font-size: 23px;
+        font-size: 21px;
     }
 }
 
@@ -1006,9 +1006,6 @@ button:hover, .modal input[type=submit]:hover {
     width: 100px;
     height: 100px;
     border:0px;
-    width: 100px;
-    height: 109px;
-    border: 0px;
     float: right;
     right: -111px;
     top: -166px;
@@ -1124,6 +1121,11 @@ nav {
     padding-top: 61px;
     margin-left:15px;
 }
+@media screen and (max-width: 450px){
+    .section6 .row {
+        margin-left: 0;
+    }
+}
 
 .section6 .block {
     min-height: 234px;
@@ -1142,6 +1144,12 @@ nav {
     text-align: left;
     line-height: 21px;
     margin-left: 29px;
+}
+
+@media screen and (max-width: 450px){
+    .section6 .block p{
+        margin-left: 0;
+    }
 }
 
 .s6-img {
@@ -1590,14 +1598,15 @@ nav {
 .abons span {
     color: #2c2e32;
     font-size: 18px;
+    font-family: 'ProximaNovaExtraBold';
     margin-left: 21px;
     padding-top: 21px;
     display: block;
-        padding-bottom: 20px;
+    padding-bottom: 20px;
     border-bottom: 1px solid #e3e3e4;
     display: inline-block;
     margin-bottom: 33px;
-    font-family: 'ProximaNovaExtraBold';
+    
 }
 
 .abons .block {
@@ -2161,7 +2170,23 @@ button.close:hover {
         background-repeat: no-repeat;
         display: block !important;
     }
+    .owl-prev:hover {
+        width: 64px;
+        top: -135px;
+        left: -19px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: block !important;
+    }
     .owl-next {
+        width: 64px;
+        right: -21px;
+        top: -137px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: block !important;
+    }
+    .owl-next:hover {
         width: 64px;
         right: -21px;
         top: -137px;
@@ -2523,7 +2548,7 @@ footer .row {
     }
     
     .section11 {
-        margin-top: -155px;   
+        margin-top: 0;   
     }
     
 /*
