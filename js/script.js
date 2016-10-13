@@ -191,8 +191,7 @@ $('.owl-carousel').owlCarousel({
             nav:true,
             loop:true
         }
-    }
-            
+    }            
 })
 
 $('.owl-carousel').on('mouseover', function (e){

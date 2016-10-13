@@ -849,6 +849,17 @@ button:hover, .modal input[type=submit]:hover {
 }
 
 .section3 .block img {
+    filter: none;
+    -webkit-filter: none;
+    -moz-filter: none;
+    -ms-filter: none;
+    -o-filter: none;
+    filter: none;
+    -webkit-filter: none;
+    width: 100%;
+}
+
+.section3 .block:hover img {
     filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
@@ -857,17 +868,6 @@ button:hover, .modal input[type=submit]:hover {
     filter: url(desaturate.svg#greyscale);
     filter: gray;
     -webkit-filter: grayscale(1);
-    width: 100%;
-}
-
-.section3 .block:hover img {
-    filter: none;
-    -webkit-filter: none;
-    -moz-filter: none;
-    -ms-filter: none;
-    -o-filter: none;
-    filter: none;
-    -webkit-filter: none;
 }
 
 .section3 .block:hover p{
@@ -884,11 +884,15 @@ button:hover, .modal input[type=submit]:hover {
 }
 
 .section3 .hover-text{
-    display: none;
+    position: relative;
+    top: -310px;
 }
 .section3 .hover-text p{
     white-space: normal;
-    color: transparent
+    color: transparent;
+    font-size: 15px;
+    background: transparent;
+        
 }
 
 .section4 .line-upright {
