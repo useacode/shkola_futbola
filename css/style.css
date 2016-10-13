@@ -199,7 +199,7 @@ body {
 }
 
 b {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'ProximaNovaExtraBold';
 }
 
 h2 {
@@ -227,14 +227,15 @@ header {
 }
 
 .logo p {
-    font-family: 'ProximaNovaThin';
-    padding-top: 33px;
+    font-family: 'ProximaNovaRegular';
+    padding-top: 20px;
     position: relative;
     left: 15px;
 }
 
 .logo b {
-    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
     position: relative;
     left: 14px;
     top: 8px;
@@ -277,7 +278,7 @@ header {
 .menu ul{
     display: table;
     width: 100%;
-    padding-top: 45px;
+    padding-top: 25px;
     position: relative;
     left: 40px;
 }
@@ -305,7 +306,7 @@ header {
     }
     .menu li{
         margin: 0 16px 0 0;
-        font-size: 15px;
+        font-size: 14px;
     }
 }
 @media screen and (max-width: 767px){
@@ -332,6 +333,8 @@ header {
     width: 336px;*/
     display: table;
     margin-left: auto;
+    position: relative;
+    top: -8px;
 }
 
 footer .phone {
@@ -365,7 +368,7 @@ footer .phone {
 .phone a:before{
     content: "";
     display: inline-block;
-    background: url(./phone-receiver.svg);
+    background: url(../img/phone-receiver.svg);
     background-repeat: no-repeat;
     background-size: contain;
     position: relative;
@@ -380,6 +383,17 @@ footer .phone {
     }
     .phone a {
         left: 0;
+    }
+}
+@media screen and (max-width: 420px){
+    .number{
+        float: left;
+    }
+    .call {
+        float: right;
+        position: relative;
+        top: 17px;
+        left: -13px;
     }
 }
 
@@ -451,6 +465,12 @@ footer .phone {
 .order-button {
     margin-top: 29px;
     text-align: center;
+    padding-right: 100px;
+}
+@media screen and (max-width: 768px){
+    .order-button {
+        padding-right: 0;
+    }
 }
 .order-button #number-input{
     border: none;
@@ -718,9 +738,8 @@ footer .phone {
 .back-sl {
     position: absolute;
     z-index: 1;
-    margin-top: -482px;
+    margin-top: -418px;
     width: 100%;
-    height: 100%;
 }
 
 .form-button {
@@ -927,29 +946,57 @@ button:hover, .modal input[type=submit]:hover {
     -webkit-filter: grayscale(1);
 }
 
-.section3 .block:hover p{
-    background: #fff;
-    color: #2c2e32;
-}
-
-.section3 .block:hover p:after {
-    background: #fff
-}
-
 .section3 .row {
     padding-top: 4px;
 }
 
 .section3 .hover-text{
     position: relative;
-    top: -310px;
+    top: -336px;
+    left: 45px;
+    width: 90%;
 }
 .section3 .hover-text p{
     white-space: normal;
     color: transparent;
     font-size: 15px;
     background: transparent;
+    text-transform: none;
+    line-height: 1.3;
         
+}
+.section3 .block:hover .hover-text p{
+    color: #fff;
+    text-shadow: 1px 1px 2px black, 0 0 1em darkgray;
+}
+
+@media screen and (max-width: 1200px){
+    .section3 .hover-text{
+        top: -315px;
+    }
+}
+@media screen and (max-width: 992px){
+    .section3 .block {
+        min-height: 275px;
+        max-height: 400px;
+        max-width: 400px;
+        float: none;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 767px){
+    .section3 .hover-text{
+        top: -345px;
+        left: 66px;
+        width: 80%;
+    }
+}
+@media screen and (max-width: 690px){
+    .section3 .hover-text{
+        top: -300px;
+        left: 66px;
+        width: 75%;
+    }
 }
 
 .section4 .line-upright {
@@ -991,8 +1038,6 @@ button:hover, .modal input[type=submit]:hover {
 .owl-prev {
     background: url(../img/arrow-left.png);
     width: 100px;
-    height: 100px;
-    border: 0px;
     height: 109px;
     border: 0px;
     float: left;
@@ -1004,8 +1049,8 @@ button:hover, .modal input[type=submit]:hover {
 .owl-next {
     background: url(../img/arrow-right.png);
     width: 100px;
-    height: 100px;
-    border:0px;
+    height: 111px;
+    border: 0px;
     float: right;
     right: -111px;
     top: -166px;
@@ -2197,6 +2242,7 @@ button.close:hover {
     .owl-dots .active {
         border: 4px solid #ff3536!important;
     }
+/*
     .section3 .block {
         min-height: 212px;
     }
@@ -2205,6 +2251,7 @@ button.close:hover {
         max-height: 212px;
         vertical-align: top;
     }
+*/
     .section9 .block:hover {
     border-left: 0px solid #ff3536;
     }
@@ -2358,6 +2405,7 @@ button.close:hover {
     .owl-dots .active {
         border: 4px solid #ff3536!important;
     }
+/*
     .section3 .block {
         min-height: 212px;
     }
@@ -2366,6 +2414,7 @@ button.close:hover {
         max-height: 212px;
         vertical-align: top;
     }
+*/
     .section9 .block:hover {
     border-left: 0px solid #ff3536;
     }
@@ -2505,7 +2554,7 @@ footer .row {
     }
     
     .back-sl {
-        height:109%;
+        display: none;
     }
     .section1 {
         padding-top: 0px;
@@ -2516,10 +2565,6 @@ footer .row {
     
     .section2 {
         margin-top: -160px;
-    }
-    
-    .section3 .block {
-        min-height: 275px;
     }
     
     .owl-carousel .owl-item img {
