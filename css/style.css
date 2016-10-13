@@ -117,25 +117,60 @@ input, select {
     vertical-align:middle;
 }
 
+/*
 @font-face {
-    font-family: ProximaNovaBlack; /* Имя шрифта */
-    src: url(PROXIMA-NOVA-BLACK.OTF); /* Путь к файлу со шрифтом */
+    font-family: ProximaNovaBlack; 
+    src: url(../fonts/PROXIMA-NOVA-BLACK.OTF); 
    }
 
 @font-face {
-    font-family: ProximaNovaExtraBold; /* Имя шрифта */
-    src: url(PROXIMA-NOVA-EXTRABOLD.OTF); /* Путь к файлу со шрифтом */
+    font-family: ProximaNovaExtraBold; 
+    src: url(../fonts/PROXIMA-NOVA-EXTRABOLD.OTF); 
    }
 
 @font-face {
-    font-family: ProximaNovaRegular; /* Имя шрифта */
-    src: url(PROXIMA-NOVA-REGULAR.OTF); /* Путь к файлу со шрифтом */
+    font-family: ProximaNovaRegular;
+    src: url(../fonts/PROXIMA-NOVA-REGULAR.OTF); 
    }
 
 @font-face {
-    font-family: ProximaNovaThin; /* Имя шрифта */
-    src: url(PROXIMA-NOVA-THIN.OTF); /* Путь к файлу со шрифтом */
+    font-family: ProximaNovaThin; 
+    src: url(../fonts/PROXIMA-NOVA-THIN.OTF); 
    }
+*/
+
+/* font-family: "ProximaNovaRegular"; */
+@font-face {
+    font-family: "ProximaNovaRegular";
+    src: url("../fonts/ProximaNovaRegular/ProximaNovaRegular.eot");
+    src: url("../fonts/ProximaNovaRegular/ProximaNovaRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/ProximaNovaRegular/ProximaNovaRegular.woff") format("woff"),
+    url("../fonts/ProximaNovaRegular/ProximaNovaRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "ProximaNovaBold"; */
+@font-face {
+    font-family: "ProximaNovaBold";
+    src: url("../fonts/ProximaNovaBold/ProximaNovaBold.eot");
+    src: url("../fonts/ProximaNovaBold/ProximaNovaBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/ProximaNovaBold/ProximaNovaBold.woff") format("woff"),
+    url("../fonts/ProximaNovaBold/ProximaNovaBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "ProximaNovaBlack"; */
+@font-face {
+    font-family: "ProximaNovaBlack";
+    src: url("../fonts/ProximaNovaBlack/ProximaNovaBlack.eot");
+    src: url("../fonts/ProximaNovaBlack/ProximaNovaBlack.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/ProximaNovaBlack/ProximaNovaBlack.woff") format("woff"),
+    url("../fonts/ProximaNovaBlack/ProximaNovaBlack.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+
 
 body {
     font-family: ProximaNovaRegular;
@@ -231,7 +266,7 @@ header {
     display: table-cell;
     margin: 0 20px 0 0;
     border-bottom: 1px dotted white;
-    font-size: 17px;
+    font-size: 16px;
 }
 
 .menu li a{
@@ -350,7 +385,7 @@ footer .phone {
 }
 
 .main-h1 h1 span {
-    background: url(./img/main-h1-bg.png);
+    background: url(../img/main-h1-bg.png);
     background-repeat: no-repeat;
     padding-right: 28px;
     padding-left: 11px;
@@ -398,7 +433,7 @@ footer .phone {
 }
 .order-button #number-input{
     border: none;
-    background: url(./img/phone_form.png);
+    background: url(../img/phone_form.png);
     background-size: 96%;
     background-position: center;
     background-repeat: no-repeat;
@@ -433,7 +468,7 @@ footer .phone {
     border-radius: none;
     -webkit-box-shadow: none;
     box-shadow: none;
-    background: url(./img/button.png);
+    background: url(../img/button.png);
     background-size: 90%;
     background-position: center;
     background-repeat: no-repeat;
@@ -448,7 +483,7 @@ footer .phone {
     display: inline;
 }
 .order-button button:hover{
-    background: url(./img/button_active.png);
+    background: url(../img/button_active.png);
 }
 
 .order-button input[type="button"]:active:focus{
@@ -675,7 +710,7 @@ footer .phone {
 
 .form-button button {
     border: none;
-    background: url(./img/big-button.png);
+    background: url(../img/big-button.png);
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -691,7 +726,7 @@ footer .phone {
 }
 
 button:hover, .modal input[type=submit]:hover {
-    background: url(./img/big-button-active.png);
+    background: url(../img/big-button-active.png);
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -933,7 +968,7 @@ button:hover, .modal input[type=submit]:hover {
 }
 
 .owl-prev {
-    background: url(./img/arrow-left.png);
+    background: url(../img/arrow-left.png);
     width: 100px;
     height: 100px;
     border: 0px;
@@ -946,7 +981,7 @@ button:hover, .modal input[type=submit]:hover {
 }
 
 .owl-next {
-    background: url(./img/arrow-right.png);
+    background: url(../img/arrow-right.png);
     width: 100px;
     height: 100px;
     border:0px;
@@ -965,10 +1000,10 @@ nav {
 }
 
 .owl-prev:hover{
-    background: url(./img/arrow-left-active.png);
+    background: url(../img/arrow-left-active.png);
 }
 .owl-next:hover {
-    background: url(./img/arrow-right-active.png);
+    background: url(../img/arrow-right-active.png);
 }
 .section5 {
     background: url(http://fs-olimpik.ru/img/section5.png) center no-repeat;
@@ -1399,42 +1434,42 @@ nav {
     display: block;
 }
 .green {
-    background: url(./img/button_green.png);
+    background: url(../img/button_green.png);
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
     color: #8ac46f;
 }
 .green:hover {
-    background: url(./img/button_green_active.png);
+    background: url(../img/button_green_active.png);
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
     color: white;
 }
 .orange {
-    background: url(./img/button_orange.png);
+    background: url(../img/button_orange.png);
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
     color: #fc8934;
 }
 .orange:hover {
-    background: url(./img/button_orange_active.png);
+    background: url(../img/button_orange_active.png);
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
     color: white;
 }
 .red {
-    background: url(./img/button_red.png);
+    background: url(../img/button_red.png);
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
     color: #bf1e2e;
 }
 .red:hover {
-    background: url(./img/button_red_active.png);
+    background: url(../img/button_red_active.png);
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -1595,7 +1630,7 @@ nav {
 
 .section12 h3:before {
     content: " ";
-    background: url(./img/quotes-left.png);
+    background: url(../img/quotes-left.png);
     background-repeat: no-repeat;
     padding: 23px 9px 5px 27px;
     position: absolute;
@@ -1604,7 +1639,7 @@ nav {
 
 .section12 h3:after {
     content: " ";
-    background: url(./img/quote-right.png);
+    background: url(../img/quote-right.png);
     background-repeat: no-repeat;
     padding: 23px 9px 5px 27px;
     position: absolute;
@@ -1663,7 +1698,7 @@ nav {
 }
 
 .section13 #button {
-    background: url(./img/button_white.png);
+    background: url(../img/button_white.png);
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -1685,7 +1720,7 @@ nav {
 }
 
 .section13 #button:hover {
-    background: url(./img/button_white_active.png);
+    background: url(../img/button_white_active.png);
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -1816,7 +1851,7 @@ footer button {
 }
 
 footer #button {
-    background: url(./img/button_white.png);
+    background: url(../img/button_white.png);
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -1828,7 +1863,7 @@ footer #button {
 }
 
 footer #button:hover {
-    background: url(./img/button_white_active.png);
+    background: url(../img/button_white_active.png);
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -1974,7 +2009,7 @@ button.close:hover {
 }
 
 .modal  input {
-    background: url(./img/modal_form.png);
+    background: url(../img/modal_form.png);
     background-size: 96%;
     background-position: center;
     background-repeat: no-repeat;
@@ -2003,7 +2038,7 @@ button.close:hover {
     
 }
 .modal input[type="button"] {
-    background: url(./img/button_red.png);
+    background: url(../img/button_red.png);
     background-size: 96%;
     background-position: center;
     background-repeat: no-repeat;
@@ -2022,7 +2057,7 @@ button.close:hover {
     margin-bottom: 50px !important;
 }
 .modal input[type="button"]:hover{
-    background: url(./img/button_red_active.png);
+    background: url(../img/button_red_active.png);
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
