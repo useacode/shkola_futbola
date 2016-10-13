@@ -708,6 +708,7 @@ button:hover, .modal input[type=submit]:hover {
 
 .section2 {
     background: url(http://fs-olimpik.ru/img/section2.png) center no-repeat;
+    background-size: cover;
     text-align: center;
     background-position: 0 39px;
     height: 482px;
