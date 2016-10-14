@@ -1567,13 +1567,14 @@ nav {
     padding: 8px 68px 5px 22px;
     font-family: 'ProximaNovaThin';
     z-index: 2;
+    line-height: 1.2;
 }
 
 
 .abons h3:after {
     content: '';
     width: 20px;
-    height: 29px;
+    height: 31px;
     position: absolute;
     margin-left: 61px;
     -webkit-transform: skew(-20deg);
