@@ -164,6 +164,10 @@ $("body").on("mouseout", 'img[src="pin.png"]', function(e){
     });
 
 }
+
+$('#aniimated-thumbnials').lightGallery({
+    thumbnail:true
+}); 
         
 $('.owl-carousel').owlCarousel({
     loop:true,

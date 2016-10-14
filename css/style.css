@@ -237,6 +237,7 @@ header {
     position: relative;
     left: 14px;
     top: 8px;
+    padding: 0;
 }
 @media screen and (max-width: 1200px){
     .logo p {
@@ -870,10 +871,12 @@ button:hover, .modal input[type=submit]:hover {
 .modal-dialog {
     max-width: 513px !important;
 }
+/*
 .img-responsive {
     height: 322px;
-    min-width: 481px;
+    min-width: 328px;
 }
+*/
 
 .section3 .top-text span {
     color: #1d5d9a;
