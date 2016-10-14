@@ -487,31 +487,31 @@ footer .phone {
 }
 
 /*
-.order-button button {
-    border: none;
-    background: url(button.png);
-    background-size: 96%;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 29px 62px 29px 70px;
-    margin-left: 25px;
+.modal input[type="button"] {
+    background-color: #eb8125;
+    border-radius: 41px;
+    box-shadow: 0.5px 1.3px 20px rgba(1, 1, 1, 0.75);
+    border: 0px;
+    padding: 26px 62px 26px 70px;
+    text-align: center;
     font-size: 15px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    position: relative;
-    top: -11px;
+    margin: auto;
+    color: white;
+    width:auto;
+    text-align: center;
+    display: block;
+    margin-bottom: 50px !important;
 }
 */
 .order-button input[type="button"] {
-    border: none;
-    border-radius: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    background: url(../img/button.png);
-    background-size: 90%;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 25px 62px 25px 70px;
+    background-color: #eb8125;
+    border-radius: 41px;
+    box-shadow: 0.5px 1.3px 20px rgba(1, 1, 1, 0.75);
+    border: 0px;
+    padding: 22px 62px 22px 70px;
+    margin-left: 25px;
     font-size: 15px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -520,13 +520,6 @@ footer .phone {
     top: 2px;
     float: none;
     display: inline;
-}
-.order-button button:hover{
-    background: url(../img/button_active.png);
-}
-
-.order-button input[type="button"]:active:focus{
-    background-color: transparent;
 }
 
 .order-button button:after {
@@ -747,16 +740,14 @@ footer .phone {
 }
 
 .form-button button {
-    border: none;
-    background: url(../img/big-button.png);
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #bb212d;
-    padding: 34px 120px 34px 120px;
+    color: white;
+    background-color: #ba1d30;
+    border-radius: 41px;
+    box-shadow: 0.5px 1.3px 20px rgba(1, 1, 1, 0.75);
+    border: 0px;
+    padding: 37px 50px 33px 50px;
     margin-left: 25px;
     font-size: 15px;
-    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin: auto;
@@ -764,11 +755,9 @@ footer .phone {
 }
 
 button:hover, .modal input[type=submit]:hover {
-    background: url(../img/big-button-active.png);
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: #eb8125;
     color: white;
+    border: 0px;
 }
 
 @media screen and (max-width: 450px){
@@ -976,7 +965,6 @@ button:hover, .modal input[type=submit]:hover {
 @media screen and (max-width: 992px){
     .section3 .block {
         min-height: 275px;
-        max-height: 400px;
         max-width: 400px;
         float: none;
         margin: 0 auto;
@@ -1492,74 +1480,53 @@ nav {
     margin-left: -150px;
 }
 .abons button {    
-    border: none;
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 34px 80px 34px 80px;
-    margin-left: 25px;
+    border-radius: 41px;
+    padding: 30px 94px 28px 92px;
     font-size: 15px;
-    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin: auto;
     display: block;
-}
-.green {
-    background: url(../img/button_green.png);
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #8ac46f;
-}
-.green:hover {
-    background: url(../img/button_green_active.png);
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: white;
-}
-.orange {
-    background: url(../img/button_orange.png);
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #fc8934;
-}
-.orange:hover {
-    background: url(../img/button_orange_active.png);
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: white;
-}
-.red {
-    background: url(../img/button_red.png);
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #bf1e2e;
-}
-.red:hover {
-    background: url(../img/button_red_active.png);
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: white;
-}
-
-
-/*
-.abons #button {
-    color: #ff3536;
+    margin-top: 12px;
     background: transparent;
-    border: 2px solid #ff3536;
     
 }
-*/
+
+.green {
+    border: 2px solid #8ac46f;  
+    color: #8ac46f;
+}
+
+.green:hover {
+    background-color:#8ac46f;
+    border: 2px solid #8ac46f; 
+}
+
+.orange {
+    border: 2px solid #fc8934;  
+    color: #fc8934;
+}
+
+.orange:hover {
+    background-color: #fc8934;
+    border: 2px solid #fc8934; 
+}
+
+.red {
+    border: 2px solid #bf1e2e;  
+    color: #bf1e2e;
+}
+
+.red:hover {
+    background-color: #bf1e2e;
+    border: 2px solid #bf1e2e; 
+}
+
+
+
+
 
 /*
-
 .abons #button:hover {
     background-color: #ff3536 !important;
     color:white;
@@ -1620,14 +1587,12 @@ nav {
     max-height: 460px;
 }
 
-/*
 .abons:hover {
     -webkit-transform: scale(1.01);
     -ms-transform: scale(1.01);
     transform: scale(1.01);
     transition: 0.4s;
 }
-*/
 
 .section11 .row {
     padding-top: 30px;
@@ -1771,18 +1736,18 @@ nav {
 }
 
 .section13 #button {
-    background: url(../img/button_white.png);
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #fff;
-    border: none;
+    border: 2px solid #fff !important;
     font-size: 14px;
     text-transform: uppercase;
     margin-top: 42px;
+    color: #fff;
+    background: transparent;
+    border: 2px solid #fff;
     float: left;
     margin-right: 10px;
     margin-top: 20px;
+    border-radius: 41px;
+    border: 0px;
     padding: 25px 52px 22px 52px;
     font-size: 15px;
     text-transform: uppercase;
@@ -1793,11 +1758,7 @@ nav {
 }
 
 .section13 #button:hover {
-    background: url(../img/button_white_active.png);
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #000;
+    border:2px solid #eb8125 !important;
 }
 
 .carousel {
@@ -1912,7 +1873,7 @@ nav {
 
 footer button {
     
-/*    border-radius: 41px;*/
+    border-radius: 41px;
     border: 0px;
     padding: 36px 52px 36px 52px;
     font-size: 15px;
@@ -1924,24 +1885,16 @@ footer button {
 }
 
 footer #button {
-    background: url(../img/button_white.png);
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
     color: #fff;
-    border: none;
+    background: transparent;
+    border: 2px solid #fff;
     float: right;
     margin-right: 10px;
     margin-top: 20px;
 }
 
 footer #button:hover {
-    background: url(../img/button_white_active.png);
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #000;
-/*    border:2px solid #ffb700 !important;*/
+    border:2px solid #eb8125 !important;
 }
 
 .owl-carousel.owl-loaded {
@@ -2082,11 +2035,9 @@ button.close:hover {
 }
 
 .modal  input {
-    background: url(../img/modal_form.png);
-    background-size: 96%;
-    background-position: center;
-    background-repeat: no-repeat;
-    border: none;
+    border: 1px solid #35373c;
+    border-radius: 41px;
+    background: transparent;
     padding: 27px 63px 26px 37px;
     color:white;
     display: block;
@@ -2111,24 +2062,23 @@ button.close:hover {
     
 }
 .modal input[type="button"] {
-    background: url(../img/button_red.png);
-    background-size: 96%;
-    background-position: center;
-    background-repeat: no-repeat;
-    border: none;
-    box-shadow: none;
+    background-color: #bf1e2e;
+    border-radius: 41px;
+    box-shadow: 0.5px 1.3px 20px rgba(1, 1, 1, 0.75);
+    border: 0px;
     padding: 26px 62px 26px 70px;
     text-align: center;
     font-size: 15px;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin: auto;
-    color: #bf1e2e;
+    color: white;
     width:auto;
     text-align: center;
     display: block;
     margin-bottom: 50px !important;
 }
+/*
 .modal input[type="button"]:hover{
     background: url(../img/button_red_active.png);
     background-size: 100%;
@@ -2136,6 +2086,7 @@ button.close:hover {
     background-repeat: no-repeat;
     color: white; 
 }
+*/
 
 
 .modal-footer {
@@ -2392,7 +2343,23 @@ button.close:hover {
         background-repeat: no-repeat;
         display: block !important;
     }
+    .owl-prev:hover {
+        width: 64px;
+        top: -135px;
+        left: -19px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: block !important;
+    }
     .owl-next {
+        width: 64px;
+        right: -21px;
+        top: -137px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: block !important;
+    }
+    .owl-next:hover {
         width: 64px;
         right: -21px;
         top: -137px;
