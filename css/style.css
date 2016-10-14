@@ -298,6 +298,17 @@ header {
     background-color: transparent;
 }
 
+@media screen and (max-width: 1200px){
+    .menu li{
+        font-size: 15px;
+    }
+    .menu li:first-child {
+        margin-left: 16px;
+    }
+    .menu li:last-child {
+        margin: 0;
+    }
+}
 @media screen and (max-width: 992px){
     .menu ul{
         left: 0;
@@ -331,13 +342,11 @@ header {
     width: 336px;*/
     display: table;
     margin-left: auto;
+    margin-right: auto;
     position: relative;
     top: -8px;
 }
 
-footer .phone {
-    width: 380px;
-}
 
 .phone img {
     padding-right: 17px;
@@ -476,6 +485,7 @@ footer .phone {
     background-size: 96%;
     background-position: center;
     background-repeat: no-repeat;
+    margin-right: 25px;
 }
 .order-button input {
     border: 1px solid white;
@@ -484,6 +494,11 @@ footer .phone {
     padding: 28px 63px 28px 37px;
     color:white;
     margin-bottom: 23px;
+}
+@media screen and (max-width: 992px){
+    .order-button #number-input{
+        margin-right: 0;
+    }
 }
 
 /*
@@ -511,7 +526,6 @@ footer .phone {
     box-shadow: 0.5px 1.3px 20px rgba(1, 1, 1, 0.75);
     border: 0px;
     padding: 22px 62px 22px 70px;
-    margin-left: 25px;
     font-size: 15px;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -1881,7 +1895,6 @@ footer button {
     letter-spacing: 1px;
     margin: auto;
     display: block;
-    margin-top: 12px;
 }
 
 footer #button {
@@ -1890,7 +1903,6 @@ footer #button {
     border: 2px solid #fff;
     float: right;
     margin-right: 10px;
-    margin-top: 20px;
 }
 
 footer #button:hover {
@@ -1919,11 +1931,6 @@ footer {
     background-repeat: repeat;
     background-size: 100% 291%;
 
-}
-
-footer .phone {
-    padding-left: 91px;
-    margin:0px;
 }
 
 footer .container {
@@ -2410,6 +2417,12 @@ footer .row {
 }
 
 @media screen and (max-width: 992px){
+    footer .logo img{
+        float: none;
+    }
+    footer .logo{
+        text-align: center;
+    }
     .logo p{
         display: none;
     }
@@ -2501,18 +2514,27 @@ footer .row {
         margin-top: 27px;
     }
     
+/*
     footer .phone {
         float:none;
         margin: auto;
         display: table;
         padding:0px;
     }
+*/
     
     .section13 .pull-right {
         float:none !important;
     }
     .conts {
-        margin-top:0px;
+        margin:0px;
+        padding-left: 0;
+        text-align: center;
+    }
+    .conts-button{
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
     }
     header {
         background-position-x: -473px;
@@ -2559,15 +2581,6 @@ footer .row {
     
     .section11 {
         margin-top: 0;   
-    }
-    
-/*
-    .section12 {
-        margin-top: -155px;   
-    }
-*/
-    .section13 {
-        margin-top: -100px;   
     }
     
     .order-text img {
