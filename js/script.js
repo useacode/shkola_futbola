@@ -116,7 +116,7 @@ function initMap() {
 
 
     
-var image = new google.maps.MarkerImage( '../img/pin.png', // Ð¸ÐºÐ¾Ð½ÐºÐ°
+var image = new google.maps.MarkerImage( 'pin.png', // Ð¸ÐºÐ¾Ð½ÐºÐ°
 new google.maps.Size(84,86), // Ñ€Ð°Ð·Ð¼ÐµÑ€Ñ‹ Ð¸ÐºÐ¾Ð½Ð¾Ðº
 new google.maps.Point(-10,-14),
 new google.maps.Point(52,46)
@@ -141,22 +141,22 @@ title:"Some title",
 });
     
 
-$("body").on("mouseover", 'img[src="../img/pin.png"]', function(e){
+$("body").on("mouseover", 'img[src="pin.png"]', function(e){
 
   var left = $(e.target).parent().css("left");
   var top = $(e.target).parent().css("top");
 
-  $('img[src="../img/pin.png"]').filter(function(){
+  $('img[src="pin.png"]').filter(function(){
     return e.target != this && $(this).parent().css("left") == left && $(this).parent().css("top") == top;
    }).css("-webkit-transform", "scale(1.5)");
 });
 
 
-$("body").on("mouseout", 'img[src="../img/pin.png"]', function(e){
+$("body").on("mouseout", 'img[src="pin.png"]', function(e){
   var left = $(e.target).parent().css("left");
   var top = $(e.target).parent().css("top");
 
-  $('img[src="../img/pin.png"]').filter(function(){
+  $('img[src="pin.png"]').filter(function(){
     return e.target != this && $(this).parent().css("left") == left && $(this).parent().css("top") == top;
    }).css("-webkit-transform", "scale(1)");
 });
