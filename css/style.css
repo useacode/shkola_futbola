@@ -257,6 +257,7 @@ header {
 
 .navbar-toggle .icon-bar{
     background: #184c7b;
+    width: 100%;
 }
 
 .menu{
@@ -466,7 +467,6 @@ header {
 .order-text p {
     font-size: 20px;
     line-height: 29px;
-    letter-spacing: 2px;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -614,88 +614,34 @@ header {
     display: block;
 }
 
+/*
 .why-us .block:hover .why-us-img  {
     background: url(http://fs-olimpik.ru/img/check-red.png);
     background-position: -4px -6px;
 }
+*/
 
 .section1 .why-us .block:hover .why-photo {
     
 }
 
-.section1 .why-us .block:hover .w1  {
+.section1 .why-us .block .w1  {
     background: url(http://fs-olimpik.ru/img/why-us.png);
     height: 525px;
     background-repeat: no-repeat;
     background-size: 100%;
     position: absolute;
     right: 5%;
-    top: 0px;
+    top: 70px;
     width: 41%;
 }
-
-.section1 .why-us .block:hover .w2  {
-    background: url(http://fs-olimpik.ru/img/sss.png);
-    height: 525px;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    position: absolute;
-    right: 5%;
-    top: 0px;
-    width: 41%;
-    z-index: 99;
+@media screen and (min-width: 1200px){
+    .section1 .why-us .block .w1  {
+        top: 18px;
+    }
 }
 
-.section1 .why-us .block:hover .w3  {
-    background: url(http://fs-olimpik.ru/img/w2.png);
-    height: 525px;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    position: absolute;
-    right: 5%;
-    top: 0px;
-    width: 41%;
-    z-index: 99;
-}
-
-.section1 .why-us .block:hover .w4  {
-    background: url(http://fs-olimpik.ru/img/w3.png);
-    height: 525px;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    position: absolute;
-    right: 5%;
-    top: 0px;
-    width: 41%;
-    z-index: 99;
-}
-
-.section1 .why-us .block:hover .w5  {
-    background: url(http://fs-olimpik.ru/img/w4.png);
-    height: 525px;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    position: absolute;
-    right: 5%;
-    top: 0px;
-    width: 41%;
-    z-index: 99;
-}
-
-.section1 .why-us .block:hover .w6  {
-    background: url(http://fs-olimpik.ru/img/w5.png);
-    height: 525px;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    position: absolute;
-    right: 5%;
-    top: 0px;
-    width: 41%;
-    z-index: 99;
-}
-
-
-
+/*
 .w1, .w2, .w3, .w4, .w5, .w6 {
     height: 525px;
     background-repeat: no-repeat;
@@ -705,6 +651,7 @@ header {
     top: 0px;
     width: 41%;
 }
+*/
 
 
 
@@ -791,6 +738,12 @@ button:hover, .modal input[type=submit]:hover {
     height: 482px;
 }
 
+@media screen and (max-width:768px){
+    .section2 {
+        height: 345px;
+    }
+}
+
 .line-upright {
     background: url(http://fs-olimpik.ru/img/line2.png);
     width:2px;
@@ -832,13 +785,18 @@ button:hover, .modal input[type=submit]:hover {
     margin-top: 7px;
 }
 
-.section2 .top-text p:last-child {
+.section2 .top-text p{
     color: white;
     font-size: 13px;
     text-transform: uppercase;
     font-family: 'ProximaNovaRegular';
     letter-spacing: 2px;
     padding-top: 19px;
+}
+@media screen and (max-width:768px){
+    .section2 .top-text p{
+        color: black;
+    }
 }
 
 .section2 .line-upright:last-child {
@@ -1035,28 +993,30 @@ button:hover, .modal input[type=submit]:hover {
 }
 
 .section12 .owl-prev, .section12 .owl-next {
-    top: -233px;
+    top: -170px;
 }
 
 .owl-prev {
     background: url(../img/arrow-left.png);
-    width: 100px;
-    height: 109px;
+    background-size: cover;
+    width: 70px;
+    height: 70px;
     border: 0px;
     float: left;
-    top: -166px;
-    left: -124px;
+    top: -141px;
+    left: -78px;
     position: relative;
 }
 
 .owl-next {
     background: url(../img/arrow-right.png);
-    width: 100px;
-    height: 111px;
+    background-size: cover;
+    width: 70px;
+    height: 70px;
     border: 0px;
     float: right;
-    right: -111px;
-    top: -166px;
+    right: -78px;
+    top: -141px;
     position: relative;
 }
 
@@ -1067,9 +1027,11 @@ nav {
 
 .owl-prev:hover{
     background: url(../img/arrow-left-active.png);
+    background-size: cover;
 }
 .owl-next:hover {
     background: url(../img/arrow-right-active.png);
+    background-size: cover;
 }
 .section5 {
     background: url(http://fs-olimpik.ru/img/section5.png) center no-repeat;
@@ -1335,7 +1297,6 @@ nav {
     white-space:nowrap;
 }
 
-
 .section8 .block p:after {
     content: '';
     width: 20px;
@@ -1350,30 +1311,8 @@ nav {
 }
 
 .section8 .block img {
-/*
-    filter: grayscale(100%);
-    -webkit-filter: grayscale(100%);
-    -moz-filter: grayscale(100%);
-    -ms-filter: grayscale(100%);
-    -o-filter: grayscale(100%);
-    filter: url(desaturate.svg#greyscale);
-    filter: gray;
-    -webkit-filter: grayscale(1);
-*/
     width: 100%;
 }
-
-/*
-.section8 .block:hover img {
-    filter: none;
-    -webkit-filter: none;
-    -moz-filter: none;
-    -ms-filter: none;
-    -o-filter: none;
-    filter: none;
-    -webkit-filter: none;
-}
-*/
 
 .section8 .block:hover p{
     background: #fff;
@@ -1420,10 +1359,6 @@ nav {
     height: 92px;
     overflow: hidden;
 }
-
-.section8 .block:hover .team-text {
-    border-bottom: 2px solid #ff3536;
-} 
 
 .section9 {
     background: url(http://fs-olimpik.ru/img/section9.png) center no-repeat;
@@ -1932,6 +1867,7 @@ footer #button:hover {
 footer {
     background: url(http://fs-olimpik.ru/img/footer.png);
     padding-top: 36px;
+    padding-bottom: 36px;
     background-repeat: repeat;
     background-size: 100% 291%;
 
@@ -2334,7 +2270,7 @@ button.close:hover {
         display: block !important;
         padding: 9px;
         position: relative;
-        top: -86px;
+        top: -56px;
         margin-top: -44px;
     }
     .section12 .owl-controls {

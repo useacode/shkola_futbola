@@ -2455,21 +2455,27 @@
 
 		this.handlers = {
 			'translated.owl.carousel refreshed.owl.carousel': $.proxy(function() {
+				//console.log("AUTO");
 				this.autoplay();
 			}, this),
 			'play.owl.autoplay': $.proxy(function(e, t, s) {
+				//console.log('stop.owl.autoplay');
 				this.play(t, s);
 			}, this),
 			'stop.owl.autoplay': $.proxy(function() {
+				//console.log('stop.owl.autoplay');
 				this.stop();
 			}, this),
 			'mouseover.owl.autoplay': $.proxy(function() {
 				if (this.core.settings.autoplayHoverPause) {
+					//console.log('mouseover.pause');
 					this.pause();
 				}
 			}, this),
 			'mouseleave.owl.autoplay': $.proxy(function() {
 				if (this.core.settings.autoplayHoverPause) {
+					//console.log('mouseover.play');
+					this.stopped = false;
 					this.autoplay();
 				}
 			}, this)
@@ -2494,12 +2500,16 @@
 	 * @todo Must be documented.
 	 */
 	Autoplay.prototype.autoplay = function() {
+		//console.log("Autoplay.prototype.autoplay")
 		if (this.core.settings.autoplay && !this.core.state.videoPlay) {
 			window.clearInterval(this.interval);
 
-			this.interval = window.setInterval($.proxy(function() {
-				this.play();
-			}, this), this.core.settings.autoplayTimeout);
+			if(!this.stopped)
+
+				this.interval = window.setInterval($.proxy(function() {
+					//console.log("Autoplay.prototype.autoplay this play")
+					this.play();
+				}, this), this.core.settings.autoplayTimeout);
 		} else {
 			window.clearInterval(this.interval);
 		}
@@ -2514,6 +2524,7 @@
 	 * @todo Must be documented.
 	 */
 	Autoplay.prototype.play = function(timeout, speed) {
+
 		// if tab is inactive - doesnt work in <IE10
 		if (document.hidden === true) {
 			return;
@@ -2537,6 +2548,8 @@
 	 * @public
 	 */
 	Autoplay.prototype.stop = function() {
+		//console.log("int" + this.interval);
+		this.stopped = true;
 		window.clearInterval(this.interval);
 	};
 
@@ -2545,6 +2558,8 @@
 	 * @public
 	 */
 	Autoplay.prototype.pause = function() {
+		//console.log("int" + this.interval);
+		this.stopped = true;
 		window.clearInterval(this.interval);
 	};
 
