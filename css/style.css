@@ -999,24 +999,24 @@ button:hover, .modal input[type=submit]:hover {
 .owl-prev {
     background: url(../img/arrow-left.png);
     background-size: cover;
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     border: 0px;
     float: left;
-    top: -145px;
-    left: 0;
+    top: -123px;
+    left: -62px;
     position: relative;
 }
 
 .owl-next {
     background: url(../img/arrow-right.png);
     background-size: cover;
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     border: 0px;
     float: right;
-    right: -11px;
-    top: -141px;
+    right: -68px;
+    top: -123px;
     position: relative;
 }
 
