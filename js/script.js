@@ -53,27 +53,27 @@ $(document).ready(function(){
                 }
             }
              });
-}); // end document.ready
+});
 
 $(document).ready(function() {
    $('a[href^="#"]').click(function () { 
      elementClick = $(this).attr("href");
      destination = $(elementClick).offset().top;
-     $('body,html').animate( { 'scrollTop': destination }, 1100 );
+     $('body,html').animate( { 'scrollTop': destination }, 1500 );
      return false;
    });
  });
 
 $(document).ready(function(){
-    $("#number-input").inputmask("+7(999)9999999");
-    $("#form-phone1").inputmask("+7(999)9999999");
-    $("#form-phone2").inputmask("+7(999)9999999");
-    $("#form-phone3").inputmask("+7(999)9999999");
-    $("#form-phone4").inputmask("+7(999)9999999");
-    $("#form-phone5").inputmask("+7(999)9999999");
-    $("#form-phone6").inputmask("+7(999)9999999");
-    $("#form-phone7").inputmask("+7(999)9999999");
-    $("#form-phone8").inputmask("+7(999)9999999");
+    $("#number-input").inputmask("99999999999");
+    $("input[id*='form-phone']").inputmask("99999999999");
+//    $("#form-phone2").inputmask("+7(999)9999999");
+//    $("#form-phone3").inputmask("+7(999)9999999");
+//    $("#form-phone4").inputmask("+7(999)9999999");
+//    $("#form-phone5").inputmask("+7(999)9999999");
+//    $("#form-phone6").inputmask("+7(999)9999999");
+//    $("#form-phone7").inputmask("+7(999)9999999");
+//    $("#form-phone8").inputmask("+7(999)9999999");
 });
 
 function initMap() {
@@ -153,7 +153,7 @@ $("body").on("mouseover", 'img[src="pin.png"]', function(e){
 
   $('img[src="pin.png"]').filter(function(){
     return e.target != this && $(this).parent().css("left") == left && $(this).parent().css("top") == top;
-   }).css("-webkit-transform", "scale(1.5)");
+   }).css("-webkit-transform", "scale(1.5)", "transition: 2s");
 });
 
 
@@ -163,7 +163,7 @@ $("body").on("mouseout", 'img[src="pin.png"]', function(e){
 
   $('img[src="pin.png"]').filter(function(){
     return e.target != this && $(this).parent().css("left") == left && $(this).parent().css("top") == top;
-   }).css("-webkit-transform", "scale(1)");
+   }).css("-webkit-transform", "scale(1)", "transition: 2s");
 });
     
   map.mapTypes.set(customMapTypeId, customMapType);
@@ -247,5 +247,4 @@ $('.owl-carousel2').owlCarousel({
     }
             
 })
-
 
