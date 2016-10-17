@@ -740,9 +740,10 @@ button:hover, .modal input[type=submit]:hover {
     height: 482px;
 }
 
-@media screen and (max-width:768px){
+@media screen and (max-width:770px){
     .section2 {
         height: 345px;
+        background-position: -150px 39px;
     }
 }
 
@@ -755,7 +756,7 @@ button:hover, .modal input[type=submit]:hover {
 }
 
 .section2 .line-upright {
-    height: 175px;
+    height: 250px;
     margin: auto;
     position: relative;
     left: 13px;
@@ -765,9 +766,9 @@ button:hover, .modal input[type=submit]:hover {
         height: 230px;
     }
 }
-@media screen and (max-width: 767px){
+@media screen and (max-width: 770px){
     .section2 .line-upright {
-        height: 120px;
+        height: 142px;
     }
 }
 
@@ -796,19 +797,27 @@ button:hover, .modal input[type=submit]:hover {
     border-bottom:0px;
     margin-top: 0px;
 }
-@media screen and (max-width: 630px){
+@media screen and (max-width: 992px){
+    .section2 .top-text h2 {
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 770px){
     .section2 .top-text h2 {
         font-size: 28px;
+        line-height: 35px;
     }
 }
 @media screen and (max-width: 515px){
     .section2 .top-text h2 {
         font-size: 21px;
+        line-height: 35px;
     }
 }
 @media screen and (max-width: 340px){
     .section2 .top-text h2 {
         font-size: 16px;
+        line-height: 35px;
     }
 }
 
@@ -834,6 +843,11 @@ button:hover, .modal input[type=submit]:hover {
 .section3{
     margin-top: 0;
 }
+
+.section3 .container{
+    max-height: 1850px;
+}
+
 .section3 .top-text h2 {
     margin-top: -15px;
     border-bottom:0px;
@@ -995,8 +1009,14 @@ button:hover, .modal input[type=submit]:hover {
 .back-sl {
     position: absolute;
     z-index: 1;
-    margin-top: -375px;
+    margin-top: -366px;
     width: 100%;
+}
+
+@media screen and (max-width: 770px){
+    .back-sl{
+        margin-top: -288px;
+    }
 }
 
 .section4{
