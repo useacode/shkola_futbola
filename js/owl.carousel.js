@@ -988,7 +988,7 @@
 		if (this.support3d) {
 			this.$stage.css({
 				transform: 'translate3d(' + coordinate + 'px' + ',0px, 0px)',
-				transition: (this.speed() / 1000) + 's'
+				transition: (this.speed() / 500) + 's'
 			});
 		} else if (this.state.isTouch) {
 			this.$stage.css({

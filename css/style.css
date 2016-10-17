@@ -1427,9 +1427,7 @@ nav {
 .button-wrap{
     position: absolute;
     bottom: 10px;
-    left: 50%;
-    width: 300px;
-    margin-left: -150px;
+    width: 100%;
 }
 .abons button {    
     border-radius: 41px;
@@ -1443,6 +1441,17 @@ nav {
     background: transparent;
     
 }
+@media screen and (max-width: 1200px){
+    .abons button {  
+        padding: 15px 50px 15px 50px;
+    }
+}
+@media screen and (max-width: 992px){
+    .abons button {  
+        padding: 30px 94px 28px 92px;
+    }
+}
+    
 
 .green {
     border: 2px solid #8ac46f;  
@@ -1533,9 +1542,12 @@ nav {
 
 .abons {
     background: rgba(255, 255, 255, 0.53);
+    position: relative;
+    top: 0;
+    left: 0;
     padding-top: 30px;
     padding-bottom: 46px;
-    min-height: 440px;
+    min-height: 450px;
     box-shadow: 0 0 21px rgba(1, 1, 1, 0.13);
     max-height: 460px;
 }
@@ -1739,7 +1751,7 @@ nav {
     display: block;
     padding-top: 47px;
     width: 118px;
-    margin-top: -76px;
+    margin-top: -15px;
 }
 
 .section12 .owl-dots:after {
@@ -2542,9 +2554,11 @@ footer .row {
         background-size: cover;
     }
     
+/*
     .active {
         border:0px !important;
     }
+*/
     
     .why-photo {
         display: none;

@@ -66,9 +66,14 @@ $(document).ready(function() {
 
 $(document).ready(function(){
     $("#number-input").inputmask("+7(999)9999999");
-});
-$(document).ready(function(){
-    $("#form-phone").inputmask("+7(999)9999999");
+    $("#form-phone1").inputmask("+7(999)9999999");
+    $("#form-phone2").inputmask("+7(999)9999999");
+    $("#form-phone3").inputmask("+7(999)9999999");
+    $("#form-phone4").inputmask("+7(999)9999999");
+    $("#form-phone5").inputmask("+7(999)9999999");
+    $("#form-phone6").inputmask("+7(999)9999999");
+    $("#form-phone7").inputmask("+7(999)9999999");
+    $("#form-phone8").inputmask("+7(999)9999999");
 });
 
 function initMap() {
@@ -210,7 +215,7 @@ $('.owl-carousel').owlCarousel({
             nav:true,
             loop:true
         }
-    }            
+    }  
 })
 
         
