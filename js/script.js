@@ -241,6 +241,6 @@ $('.owl-carousel2').owlCarousel({
             
 })
 
-$('body').click(function(){
+$('body').on('click touchstart', function() {
     $(".navbar-collapse").collapse('hide');
 });
