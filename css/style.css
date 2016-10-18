@@ -1890,9 +1890,14 @@ nav {
     margin-bottom: 31px;
 }
 
-#map {
+.map-wrap {
     height:530px;
     width:100%;
+}
+@media screen and (max-width: 420px){
+    .map-wrap {
+        height: 330px;
+    }
 }
 
 .conts {
@@ -2286,6 +2291,15 @@ button.close:hover {
     text-align: center;
     display: block;
     margin-bottom: 50px !important;
+}
+
+@media screen and (max-width: 420px){
+    .modal  input {
+        padding: 26px 32px 26px 30px;
+    }
+    .modal input[type="button"] {
+        padding: 26px 35px 26px 35px;
+    }
 }
 /*
 .modal input[type="button"]:hover{

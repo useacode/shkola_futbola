@@ -67,13 +67,6 @@ $(document).ready(function() {
 $(document).ready(function(){
     $("#number-input").inputmask("99999999999");
     $("input[id*='form-phone']").inputmask("99999999999");
-//    $("#form-phone2").inputmask("+7(999)9999999");
-//    $("#form-phone3").inputmask("+7(999)9999999");
-//    $("#form-phone4").inputmask("+7(999)9999999");
-//    $("#form-phone5").inputmask("+7(999)9999999");
-//    $("#form-phone6").inputmask("+7(999)9999999");
-//    $("#form-phone7").inputmask("+7(999)9999999");
-//    $("#form-phone8").inputmask("+7(999)9999999");
 });
 
 function initMap() {
