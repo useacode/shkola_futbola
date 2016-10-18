@@ -449,8 +449,10 @@ header {
         display: none;
     }
     footer .number{
-        top: 0;
-        left: 48px;
+        position: static;
+    }
+    footer .phone{
+        float: none;
     }
 }
 
@@ -2318,8 +2320,9 @@ button.close:hover {
 /*RESPONSIVE STYLES*/
 
 @media screen and (max-width: 420px) { 
-     p span,  p b {
-    display: table-cell;
+     .phone p span, .phone p b {
+        display: table-cell;
+    }
 }
 /*
 .phone {
@@ -2528,7 +2531,7 @@ border-left: 0px solid #ff3536;
         padding: 9px;
         position: relative;
         top: -26px;
-        margin-top: -44px;
+/*        margin-top: -44px;*/
     }
     .section12 .owl-controls {
         display: none !important;   
@@ -2545,7 +2548,7 @@ border-left: 0px solid #ff3536;
         left: -19px;
         background-size: contain;
         background-repeat: no-repeat;
-        display: block !important;
+/*        display: block !important;*/
     }
     .owl-prev:hover {
         width: 64px;
@@ -2561,7 +2564,7 @@ border-left: 0px solid #ff3536;
         top: -137px;
         background-size: contain;
         background-repeat: no-repeat;
-        display: block !important;
+/*        display: block !important;*/
     }
     .owl-next:hover {
         width: 64px;
