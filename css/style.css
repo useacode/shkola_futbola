@@ -358,11 +358,14 @@ header {
 .phone {
 /*    float:right;
     width: 336px;*/
-/*    display: table;*/
+    display: table;
     margin-left: auto;
     margin-right: auto;
     position: relative;
     top: -8px;
+}
+footer .phone {
+    display: table;
 }
 
 .phone .number a{
@@ -437,6 +440,7 @@ header {
     }
     .phone{
         float: left;
+        display: block;
     }
     .number{
         position: relative;
