@@ -2049,7 +2049,7 @@ nav {
 
 @media screen and (max-width: 420px){
     .section13{
-        margin-top: -40px;
+        margin-top: -70px;
     }
 }
 .section13 .top-text h2{
@@ -2073,9 +2073,6 @@ nav {
     margin: auto;
     height: 78px;
 } 
-
-
-
 
 .section13 .top-text p:last-child {
     color: #2c2e32;
