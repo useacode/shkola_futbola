@@ -248,3 +248,6 @@ $('.owl-carousel2').owlCarousel({
             
 })
 
+$('body').click(function(){
+    $(".navbar-collapse").collapse('hide');
+});

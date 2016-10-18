@@ -223,6 +223,11 @@ header {
     float:left;
     width: 90px;
 }
+@media screen and (max-width: 767px){
+    .logo img {
+        display: none;
+    }
+}
 
 .logo p {
     font-family: 'ProximaNovaRegular';
@@ -247,17 +252,29 @@ header {
 }
 
 .navbar-toggle{
-    background-color: #bf1e2e;
+    background-color: transparent;
 }
 
 .navbar-toggle:hover{
-    background: #d52b3c;
+    background: transparent;
     border: 1px solid transparent;
 }
 
-.navbar-toggle .icon-bar{
-    background: #184c7b;
+.navbar-toggle .icon-bar {
+    background: white;
+    display: block;
+    width: 45px;
+    height: 6px;
+    border-radius: 4px;
 }
+/*
+@media screen and (max-width: 767px){
+    .navbar-toggle{
+        float: left;
+        left: 10px;
+    }
+}
+*/
 
 .menu{
     padding: 0;
@@ -348,7 +365,26 @@ header {
     top: -8px;
 }
 
+.phone .number a{
+    text-decoration: none;
+    color: white;
+}
 
+.phone .mini-call{
+    display: none;
+    background: url(../img/big-phone.png) center no-repeat;
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    top: -101px;
+    left: 207px;
+}
+.phone .mini-call:hover{
+    background: url(../img/big-phone_hover.png) center no-repeat;
+    background-size: contain;
+    cursor:pointer;
+}
 .phone img {
     padding-right: 17px;
     padding-top: 29px;
@@ -362,7 +398,7 @@ header {
     display: -webkit-box;
 }
 
-.phone a {
+.phone .call a {
     text-decoration: underline;
     font-size: 13px;
     text-transform: uppercase;
@@ -375,7 +411,7 @@ header {
 .call{
     text-align: center;
 }
-.phone a:before{
+.phone .call a:before{
     content: "";
     display: inline-block;
     background: url(../img/phone-receiver.svg);
@@ -389,26 +425,89 @@ header {
 }
 @media screen and (max-width: 992px){
     .phone p {
-        font-size: 20px;
+        font-size: 19px;
     }
-    .phone a {
+    .phone .call a {
         left: 0;
     }
 }
-@media screen and (max-width: 420px){
-    .number{
+@media screen and (max-width: 767px){
+    .phone .mini-call{
+        display: block;
+    }
+    .phone{
         float: left;
-        max-width: 150px;
+    }
+    .number{
+        position: relative;
+        top: -69px;
+    }
+/*
+    .number:after{
+        content: "";
+        display: inline-block;
+        background: url(../img/big-phone.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: relative;
+        width: 40px;
+        height: 40px;
+        top: -34px;
+        left: 207px;
+    }
+*/
+    .number p{
+        font-size: 26px;
     }
     .call {
-        float: right;
-        position: relative;
-        top: 17px;
-        left: -13px;
+        display: none;
     }
-    .phone p {
-        font-size: 16px;
+}
+
+
+@media screen and (max-width: 767px){ 
+    .menu li:first-child {
+        margin-left: 0;
     }
+    .menu ul{ 
+        display: block; 
+        width: auto; 
+        float: right; 
+        position: relative; 
+        padding: 0; 
+        left: 15px;    
+        top: -8px; 
+    } 
+    .menu li{ 
+        display: block; 
+        left: -6px; 
+        margin: 0 0 10px 0; 
+        border-bottom: none; 
+        text-align: left; 
+        
+    } 
+} 
+
+@media screen and (max-width: 767px){ 
+
+    .navbar-collapse.in, .navbar-collapse.collapsing { 
+    overflow-x: hidden; 
+    overflow-y: hidden; 
+    position: absolute; 
+    right: 15px; 
+    top: 47px; 
+    z-index: 100; 
+    } 
+
+    .navbar-collapse.collapsing{ 
+
+    } 
+
+    .navbar-collapse.in .nav, .navbar-collapse.collapsing .nav{ 
+        background: #d52b3c; 
+        padding: 22px 30px 16px 30px;
+    } 
+
 }
 
 .main-h1 {
@@ -2011,7 +2110,7 @@ footer #button:hover {
     height: 199px;
 }
 
-.phone a {
+.phone .call a {
     display: inline-block;
 }
 
@@ -2204,13 +2303,17 @@ button.close:hover {
 }
 /*RESPONSIVE STYLES*/
 
+/*
 @media screen and (max-width: 420px) { 
     .phone p span, .phone p b {
     display: table-cell;
 }
+*/
+/*
 .phone {
     display: table-row;
 }
+*/
 .item img {
     height: 199px !important;
 }
@@ -2539,7 +2642,7 @@ footer .row {
     .main-h1 {
         display: block;
         text-align: center;
-        margin: auto;
+        margin-top: -90px;
     }
     
     .main-h2 p {
