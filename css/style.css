@@ -2338,9 +2338,9 @@ button.close:hover {
 /*RESPONSIVE STYLES*/
 
 @media screen and (max-width: 420px) { 
-     .phone p span, .phone p b {
-        display: table-cell;
-    }
+     p span,  p b {
+   display: table-cell;
+   
 }
 /*
 .phone {
