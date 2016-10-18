@@ -40,7 +40,7 @@
 	Inputmask.prototype = {
 		//options default
 		defaults: {
-			placeholder: "_",
+			placeholder: "",
 			optionalmarker: {
 				start: "[",
 				end: "]"
