@@ -2317,12 +2317,10 @@ button.close:hover {
 }
 /*RESPONSIVE STYLES*/
 
-/*
 @media screen and (max-width: 420px) { 
-    .phone p span, .phone p b {
+     p span,  p b {
     display: table-cell;
 }
-*/
 /*
 .phone {
     display: table-row;
