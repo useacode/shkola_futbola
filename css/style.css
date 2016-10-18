@@ -378,7 +378,7 @@ header {
     height: 40px;
     position: relative;
     top: -101px;
-    left: 207px;
+    left: 169px;
 }
 .phone .mini-call:hover{
     background: url(../img/big-phone_hover.png) center no-repeat;
@@ -442,25 +442,15 @@ header {
         position: relative;
         top: -69px;
     }
-/*
-    .number:after{
-        content: "";
-        display: inline-block;
-        background: url(../img/big-phone.png);
-        background-repeat: no-repeat;
-        background-size: contain;
-        position: relative;
-        width: 40px;
-        height: 40px;
-        top: -34px;
-        left: 207px;
-    }
-*/
     .number p{
-        font-size: 26px;
+        font-size: 22px;
     }
     .call {
         display: none;
+    }
+    footer .number{
+        top: 0;
+        left: 48px;
     }
 }
 
@@ -1028,7 +1018,12 @@ button:hover, .modal input[type=submit]:hover {
     z-index: 2;
     
 }
-
+@media screen and (max-width: 420px){
+    .section3 .command-caption{
+        left: -63px;
+        top: 90px;
+    }
+}
 
 .section3 p:after {
     content: '';
@@ -1153,6 +1148,11 @@ button:hover, .modal input[type=submit]:hover {
         width: 75%;
     }
 }
+@media screen and (max-width: 420px){
+    .section3 .hover-text{
+        top: -297px;
+    }
+}
 
 .back-sl {
     position: absolute;
@@ -1205,6 +1205,10 @@ button:hover, .modal input[type=submit]:hover {
 
 .section4 .carousel-wrap{
     padding-bottom: 50px;
+}
+
+.section4 .owl-dots{
+        top: 0;
 }
 
 .section12 .owl-prev, .section12 .owl-next {
@@ -1588,7 +1592,7 @@ nav {
 }
 
 .section9 {
-    background: url(http://fs-olimpik.ru/img/section9.png) center no-repeat;
+    background: url(../img/section9.png) center no-repeat;
     background-position-y: -500px;
     z-index: 999;
     background-size: 167%;
@@ -1640,7 +1644,7 @@ nav {
 }
 
 .section9 .block p {
-    padding-top: 13px;
+    padding-top: 8px;
 }
 
 .section9 .row {
@@ -1985,6 +1989,11 @@ nav {
         margin-top: -34px;
     }
 }
+@media screen and (max-width: 420px){
+    .section12 .owl-dots {
+        margin-top: 70px;
+    }
+}
 
 .section12 .owl-dots:after {
     content: " ";
@@ -2036,6 +2045,11 @@ nav {
     margin: 0;
 }
 
+@media screen and (max-width: 420px){
+    .section13{
+        margin-top: -40px;
+    }
+}
 .section13 .top-text h2{
     border: 0;
     padding-bottom: 10px;
@@ -2362,7 +2376,7 @@ button.close:hover {
     left: -19px;
     background-size: contain;
     background-repeat: no-repeat;
-    display: block !important;
+/*    display: block !important;*/
 }
 .owl-prev:hover {
     width: 64px;
@@ -2370,7 +2384,6 @@ button.close:hover {
     left: -19px;
     background-size: contain;
     background-repeat: no-repeat;
-    display: block !important;
 }
 .owl-next {
     width: 64px;
@@ -2378,7 +2391,7 @@ button.close:hover {
     top: -137px;
     background-size: contain;
     background-repeat: no-repeat;
-    display: block !important;
+/*    display: block !important;*/
 }
 .owl-next:hover {
     width: 64px;
