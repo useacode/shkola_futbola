@@ -2302,7 +2302,7 @@ button.close:hover {
 
 @media screen and (max-width: 420px){
     .modal  input {
-        padding: 26px 20px 26px 20px;
+        padding: 26px 40px 26px 40px;
     }
     .modal input[type="button"] {
         padding: 26px 70px 26px 70px;
