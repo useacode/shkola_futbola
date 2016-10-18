@@ -739,11 +739,21 @@ button:hover, .modal input[type=submit]:hover {
     background-position: 0 39px;
     height: 482px;
 }
-
+@media screen and (max-width:991px){
+    .section2 {
+        margin-top: -80px;
+        background-position: -150px 39px;
+    }
+}
 @media screen and (max-width:770px){
     .section2 {
         height: 345px;
-        background-position: -150px 39px;
+        
+    }
+}
+@media screen and (max-width:767px){
+    .section2 {
+        margin-top: -180px;
     }
 }
 
@@ -766,7 +776,7 @@ button:hover, .modal input[type=submit]:hover {
         height: 230px;
     }
 }
-@media screen and (max-width: 770px){
+@media screen and (max-width: 991px){
     .section2 .line-upright {
         height: 142px;
     }
@@ -805,13 +815,17 @@ button:hover, .modal input[type=submit]:hover {
 @media screen and (max-width: 770px){
     .section2 .top-text h2 {
         font-size: 28px;
+/*        line-height: 35px;*/
+    }
+}
+@media screen and (max-width: 690px){
+    .section2 .top-text h2 {
         line-height: 35px;
     }
 }
 @media screen and (max-width: 515px){
     .section2 .top-text h2 {
         font-size: 21px;
-        line-height: 35px;
     }
 }
 @media screen and (max-width: 340px){
@@ -897,17 +911,20 @@ button:hover, .modal input[type=submit]:hover {
 }
 
 .section3 .block p{
+    font-size: 18px;
+    font-family: 'ProximaNovaThin';
+    white-space:nowrap;
+}
+.section3 .command-caption{
     text-align: left;
     display: inline-block;
     position: relative;
-    float: left;
-    top: 77px;
-    font-size: 18px;
-   
-    padding: 8px 18px 5px 7px;
-    font-family: 'ProximaNovaThin';
+/*    float: left;*/
+    top: 107px;
+    left: -115px;
+    padding: 8px 18px 5px 7px;  
     z-index: 2;
-    white-space:nowrap;
+    
 }
 
 
@@ -953,6 +970,34 @@ button:hover, .modal input[type=submit]:hover {
     filter: gray;
     -webkit-filter: grayscale(1);
 }
+.section3 .command-img{
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 383px;
+    margin-top: 40px;
+}
+
+.section3 .first-command .command-img{
+    background-image: url(../img/exercises1.png);
+}
+.section3 .second-command .command-img{
+    background-image: url(../img/exercises2.png);
+}
+.section3 .third-command .command-img{
+    background-image: url(../img/exercises3.png);
+}
+
+.section3 .first-command:hover .command-img{
+    background-image: url(../img/exercises1_hover.png);
+}
+.section3 .second-command:hover .command-img{
+    background-image: url(../img/exercises2_hover.png);
+}
+.section3 .third-command:hover .command-img{
+    background-image: url(../img/exercises3_hover.png);
+}
+
 
 .section3 .row {
     padding-top: 4px;
@@ -960,9 +1005,9 @@ button:hover, .modal input[type=submit]:hover {
 
 .section3 .hover-text{
     position: relative;
-    top: -336px;
-    left: 45px;
-    width: 90%;
+    top: -255px;
+    left: 28px;
+    width: 85%;
 }
 .section3 .hover-text p{
     white-space: normal;
@@ -980,12 +1025,13 @@ button:hover, .modal input[type=submit]:hover {
 
 @media screen and (max-width: 1200px){
     .section3 .hover-text{
-        top: -315px;
+        top: -257px;
     }
 }
-@media screen and (max-width: 992px){
+@media screen and (max-width: 1200px){
     .section3 .block {
         min-height: 275px;
+        max-height: 480px;
         max-width: 400px;
         float: none;
         margin: 0 auto;
@@ -993,34 +1039,42 @@ button:hover, .modal input[type=submit]:hover {
 }
 @media screen and (max-width: 767px){
     .section3 .hover-text{
-        top: -345px;
-        left: 66px;
+        top: -264px;
+        left: 33px;
         width: 80%;
     }
 }
 @media screen and (max-width: 690px){
     .section3 .hover-text{
-        top: -300px;
-        left: 66px;
+        top: -268px;
+        left: 40px;
         width: 75%;
     }
 }
 
 .back-sl {
     position: absolute;
-    z-index: 1;
+    z-index: -1;
     margin-top: -366px;
     width: 100%;
 }
 
-@media screen and (max-width: 770px){
+@media screen and (max-width: 1200px){
     .back-sl{
-        margin-top: -288px;
+/*        margin-top: -288px;*/
+        display: none;
     }
 }
 
 .section4{
+    background: #fff;
+    padding-top: 0px;
     margin-top: 0;
+}
+@media screen and (max-width: 1200px){
+    .section4{
+        padding-top: 30px;
+    }
 }
 .section4 .line-upright {
     height: 67px;
@@ -1046,11 +1100,6 @@ button:hover, .modal input[type=submit]:hover {
 
 .section4 .top-text p{
     font-size: 36px;}
-
-.section4 {
-    background: #fff;
-    padding-top: 0px;
-}
 
 .section4 .carousel-wrap{
     padding-bottom: 50px;
@@ -1376,6 +1425,14 @@ nav {
 @media screen and (max-width: 500px){
     .section8 .block p{
         font-size: 13px;
+    }
+}
+@media screen and (max-width: 1024px){
+    .section8 .block p{
+        font-size: 14px;
+    }
+    .section8 .block p:after {
+        content: none;
     }
 }
 
@@ -1820,6 +1877,11 @@ nav {
     padding-top: 47px;
     width: 118px;
     margin-top: -76px;
+}
+@media screen and (max-width: 992px){
+    .section12 .owl-dots {
+        margin-top: -34px;
+    }
 }
 
 .section12 .owl-dots:after {
@@ -2558,18 +2620,16 @@ footer .row {
         background-position-x: -473px;
     }
     
+/*
     .back-sl {
         display: none;
     }
+*/
     .section1 {
         padding-top: 0px;
     }
     .why-us .block:hover .line-horizontally {
         opacity: 0;
-    }
-    
-    .section2 {
-        margin-top: -160px;
     }
     
     .owl-carousel .owl-item img {
