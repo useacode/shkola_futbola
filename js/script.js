@@ -120,7 +120,7 @@ new google.maps.Point(-10,-14),
 new google.maps.Point(52,46)
 );
  
-var companyPos = new google.maps.LatLng(59.887162, 30.258839);
+var companyPos = new google.maps.LatLng(59.887873, 30.2603853);
 var companyMarker = new google.maps.Marker({
 position: companyPos,
 map: map,
@@ -129,7 +129,7 @@ icon: image,
 title:"Some title1"
 });
     
-var companyPos1 = new google.maps.LatLng(59.982476, 30.240202);
+var companyPos1 = new google.maps.LatLng(59.98292, 30.2391767);
 var companyMarker1 = new google.maps.Marker({
 position: companyPos1,
 map: map,

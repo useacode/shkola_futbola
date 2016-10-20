@@ -213,7 +213,7 @@ a:hover, button:hover {
 
 header {
     padding-top:28px;
-    background: url(http://fs-olimpik.ru/img/header.png) center;
+    background: url(../img/header.png) center;
     background-repeat: no-repeat;
     padding-bottom: 259px;
     background-size: cover;
@@ -621,7 +621,7 @@ footer .phone {
 }
 */
 .order-button input[type="button"] {
-    background-color: #eb8125;
+    background-color: #ffa402;
     border-radius: 41px;
     box-shadow: 0.5px 1.3px 20px rgba(1, 1, 1, 0.75);
     border: 0px;
@@ -636,7 +636,7 @@ footer .phone {
     display: inline;
 }
 .order-button input[type="button"]:hover {
-    background-color: #f79b4b;
+    background-color: #f29a00;
 }
 
 .order-button button:after {
@@ -682,7 +682,7 @@ footer .phone {
 }
 
 .top-text span {
-    color: #ba1d30;
+    color: #f32416;
 }
 
 @media screen and (max-width: 450px){
@@ -799,7 +799,7 @@ footer .phone {
 
 .form-button button {
     color: white;
-    background-color: #ba1d30;
+    background-color: #f32416;
     border-radius: 41px;
     box-shadow: 0.5px 1.3px 20px rgba(1, 1, 1, 0.75);
     border: 0px;
@@ -961,7 +961,8 @@ button:hover, .modal input[type=submit]:hover {
 }
 
 .section3 .top-text h2 {
-    margin-top: -15px;
+    margin-top: 0px;
+    margin-bottom: -20px;
     border-bottom:0px;
     
 }
@@ -1010,7 +1011,7 @@ button:hover, .modal input[type=submit]:hover {
 
 .section3 .block p{
     font-size: 18px;
-    font-family: 'ProximaNovaThin';
+    font-family: 'ProximaNovaRegular';
     white-space:nowrap;
 }
 .section3 .command-caption{
@@ -1064,14 +1065,12 @@ button:hover, .modal input[type=submit]:hover {
 }
 
 .section3 .block:hover img {
-    filter: grayscale(100%);
-    -webkit-filter: grayscale(100%);
-    -moz-filter: grayscale(100%);
-    -ms-filter: grayscale(100%);
-    -o-filter: grayscale(100%);
-    filter: url(desaturate.svg#greyscale);
-    filter: gray;
-    -webkit-filter: grayscale(1);
+    filter: brightness(50%);
+    -webkit-filter: brightness(50%);
+    -moz-filter: brightness(50%);
+    -ms-filter: brightness(50%);
+    -o-filter: brightness(50%);
+   
 }
 .section3 .command-img{
     background-size: contain;
@@ -1113,6 +1112,7 @@ button:hover, .modal input[type=submit]:hover {
     width: 85%;
 }
 .section3 .hover-text p{
+    font-weight: 900;
     white-space: normal;
     color: transparent;
     font-size: 15px;
@@ -1123,7 +1123,7 @@ button:hover, .modal input[type=submit]:hover {
 }
 .section3 .block:hover .hover-text p{
     color: #fff;
-    text-shadow: 1px 1px 2px black, 0 0 1em darkgray;
+    text-shadow: 1px 1px 1px black, 0 0 2em darkgray;
 }
 
 @media screen and (max-width: 1200px){
@@ -1190,7 +1190,8 @@ button:hover, .modal input[type=submit]:hover {
 }
 
 .section4 .top-text h2 {
-    border-bottom:0px; 
+   padding-bottom:30px; 
+   
 }
 
 .section4 .top-text span {
@@ -1211,6 +1212,7 @@ button:hover, .modal input[type=submit]:hover {
 
 .section4 .carousel-wrap{
     padding-bottom: 50px;
+   
 }
 
 .section4 .owl-dots{
@@ -1334,6 +1336,7 @@ nav {
 }
 
 .section6 .top-text h2 {
+margin-top:20px;
     border-bottom:0px;   
 }
 
@@ -1704,23 +1707,23 @@ nav {
 }
 
 .orange {
-    border: 2px solid #fc8934;  
-    color: #fc8934;
+    border: 2px solid #fe9c2e;  
+    color: #fe9c2e;
 }
 
 .orange:hover {
-    background-color: #fc8934;
-    border: 2px solid #fc8934; 
+    background-color: #e9800a;
+    border: 2px solid #e9800a; 
 }
 
 .red {
-    border: 2px solid #bf1e2e;  
-    color: #bf1e2e;
+    border: 2px solid #ff1016;  
+    color: #ff1016;
 }
 
 .red:hover {
-    background-color: #bf1e2e;
-    border: 2px solid #bf1e2e; 
+    background-color: #f32416;
+    border: 2px solid #f32416; 
 }
 
 
@@ -1920,7 +1923,7 @@ nav {
     padding-top: 68px;
   
     font-family: 'ProximaNovaThin';
-    color: #ff3536;
+    color: #fff;
     border-bottom: 2px solid #595958;
     display: inline-block;
     padding-bottom: 21px;
@@ -2176,7 +2179,8 @@ input.error {
 }
 
 .order-button input.error {
-    background-image: none !important;
+    background-image: none ;
+    background-color: #666666 !important;
     
 }
 
@@ -2284,7 +2288,7 @@ button.close:hover {
     
 }
 .modal input[type="button"] {
-    background-color: #bf1e2e;
+    background-color: #ff1016;
     border-radius: 41px;
     box-shadow: 0.5px 1.3px 20px rgba(1, 1, 1, 0.75);
     border: 0px;
@@ -2299,6 +2303,8 @@ button.close:hover {
     display: block;
     margin-bottom: 50px !important;
 }
+
+
 
 @media screen and (max-width: 420px){
     .modal  input {
@@ -2338,9 +2344,9 @@ button.close:hover {
 /*RESPONSIVE STYLES*/
 
 @media screen and (max-width: 420px) { 
-     p span,  p b {
+     p span, h2 p b {
    display: table-cell;
-   
+  
 }
 /*
 .phone {
@@ -2369,7 +2375,7 @@ button.close:hover {
     text-decoration: none;
 }
 .why-us .block:hover .why-us-img {
-    background: url(http://fs-olimpik.ru/img/check-black.png);
+
     background-position: -4px -6px;
 }
 .owl-carousel .owl-item img {
@@ -2530,13 +2536,8 @@ border-left: 0px solid #ff3536;
     .w1, .w2, .w3, .w4, .w5, .w6 {
         display: none;
     }
-    .why-us .block:hover p {
-        text-decoration: none;
-    }
-    .why-us .block:hover .why-us-img {
-        background: url(http://fs-olimpik.ru/img/check-black.png);
-        background-position: -4px -6px;
-    }
+
+ 
     .owl-carousel .owl-item img {
         padding-left:0;
     }
@@ -2674,12 +2675,12 @@ footer .row {
     .main-h1 {
         display: block;
         text-align: center;
-        margin-top: -90px;
+        margin-top: -100px;
     }
     
     .main-h2 p {
         border-top:0px;
-        text-align: center
+        text-align: center;
     }
     
     .order-text p {
