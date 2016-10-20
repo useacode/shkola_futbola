@@ -35,7 +35,7 @@ function myconf() {
     var cf = $.Deferred();
         $.ajax({
             type: 'POST',
-            url: 'feedback/',
+            url: '/feedback/',
             dataType: 'json',
             data: 'act=cfg',
             success: function(answer) {
@@ -66,7 +66,7 @@ $(document).ready(function() {
 
 
 /**
- * ÐžÑ‚Ð¿Ñ€Ð°Ð²ÐºÐ° Ñ„Ð¾Ñ€Ð¼.
+ * Отправка форм.
  *
  */
 
@@ -78,7 +78,7 @@ function feedback(vars) {
 
     $.ajax({
         type: 'POST',
-        url: 'feedback/',
+        url: '/feedback/',
         cache: false,
         dataType: 'json',
         data: 'act=' + vars.act + '&' + vars.data,
@@ -94,23 +94,23 @@ function feedback(vars) {
              if(/textbox/i.test(cfg.notify)) {
                     if(isset(answer.errors)) {
                         $.each(answer.errors, function(k,val) {
-                            $.jGrowl(val, {theme: 'error', header: 'ÐžÑˆÐ¸Ð±ÐºÐ°!', life: 3000 });
+                            $.jGrowl(val, {theme: 'error', header: 'Ошибка!', life: 3000 });
                         });
                     } if(isset(answer.infos)) {
                         $.each(answer.infos, function(k,val) {
-                            $.jGrowl(val, {theme: 'infos', header: 'Ð’Ð½Ð¸Ð¼Ð°Ð½Ð¸Ðµ!', life: 3000 });
+                            $.jGrowl(val, {theme: 'infos', header: 'Внимание!', life: 3000 });
                         });
                     }
 
             }  if(/color/i.test(cfg.notify)) {
-                 $(vars.form).find('input[type=text]:visible, textarea:visible, select:visible').css({'border': '1px solid #D7D5CF'}, 300);
+//                 $(vars.form).find('input[type=text]:visible, textarea:visible, select:visible').css({'border': '1px solid #D7D5CF'}, 300);
                  if(isset(answer.errors)) {
                      $.each(answer.errors, function(k,val) {
                          var reg = /[a-z]/i;
                          if(reg.test(k)) {
                           var e = $(vars.form).find('[name='+ k +']');
                           if(e.length == 1) {
-                           $(e).css({'border': '1px solid #FF532E'}, 100);
+                           $(e).css({'color': '#FF532E'}, 100);
                           }
                         }
                      });
@@ -161,9 +161,9 @@ function feedback(vars) {
 
 
 /**
- * ÐžÐ±Ñ€Ð°Ð±Ð¾Ñ‚Ñ‡Ð¸Ðº ÐºÐ½Ð¾Ð¿ÐºÐ¸ Ñ„Ð¾Ñ€Ð¼.
- * ÐšÐ½Ð¾Ð¿ÐºÐ° Ð´Ð¾Ð»Ð¶Ð½Ð° Ð±Ñ‹Ñ‚ÑŒ Ð²Ð½ÑƒÑ‚Ñ€Ð¸ Ñ‚ÐµÐ³Ð¾Ð² <form> c ÐºÐ»Ð°ÑÑÐ¾Ð¼ .feedback
- * Ð±ÑƒÐ´ÐµÑ‚ Ð¾Ñ‚Ð¿Ñ€Ð°Ð²Ð»ÐµÐ½Ð¾ Ð»ÑŽÐ±Ð¾Ðµ ÐºÐ¾Ð»-Ð²Ð¾ Ð¿Ð¾Ð»ÐµÐ¹, ÐºÑ€Ð¾Ð¼Ðµ Ñ„Ð°Ð¹Ð»Ð¾Ð²
+ * Обработчик кнопки форм.
+ * Кнопка должна быть внутри тегов <form> c классом .feedback
+ * будет отправлено любое кол-во полей, кроме файлов
  *
  */
 

@@ -1,6 +1,6 @@
 /*
 
- arcticModal â€” jQuery plugin
+ arcticModal — jQuery plugin
  Version: 0.3
  Author: Sergey Predvoditelev (sergey.predvoditelev@gmail.com)
  Company: Arctic Laboratory (http://arcticlab.ru/)
@@ -13,7 +13,7 @@
 
 	var default_options = {
 
-		type: 'html', // ajax Ð¸Ð»Ð¸ html
+		type: 'html', // ajax или html
 		content: '',
 		url: '',
 		ajax: {},
@@ -74,7 +74,7 @@
 	var utils = {
 
 
-		// ÐžÐ¿Ñ€ÐµÐ´ÐµÐ»ÑÐµÑ‚ Ð¿Ñ€Ð¾Ð¸Ð·Ð¾ÑˆÐ»Ð¾ Ð»Ð¸ ÑÐ¾Ð±Ñ‹Ñ‚Ð¸Ðµ e Ð²Ð½Ðµ Ð±Ð»Ð¾ÐºÐ° block
+		// Определяет произошло ли событие e вне блока block
 		isEventOut: function(blocks, e) {
 			var r = true;
 			$(blocks).each(function() {
@@ -91,7 +91,7 @@
 	var modal = {
 
 
-		// Ð’Ð¾Ð·Ð²Ñ€Ð°Ñ‰Ð°ÐµÑ‚ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚, ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ð¼ Ð±Ñ‹Ð» Ð²Ñ‹Ð·Ð²Ð°Ð½ Ð¿Ð»Ð°Ð³Ð¸Ð½
+		// Возвращает элемент, которым был вызван плагин
 		getParentEl: function(el) {
 			var r = $(el);
 			if (r.data('arcticmodal')) return r;
@@ -101,7 +101,7 @@
 		},
 
 
-		// ÐŸÐµÑ€ÐµÑ…Ð¾Ð´
+		// Переход
 		transition: function(el, action, options, callback) {
 			callback = callback==undefined ? $.noop : callback;
 			switch (options.type) {
@@ -116,10 +116,10 @@
 		},
 
 
-		// ÐŸÐ¾Ð´Ð³Ð¾Ñ‚Ð²ÐºÐ° ÑÐ¾Ð´ÐµÑ€Ð¶Ð¸Ð¼Ð¾Ð³Ð¾ Ð¾ÐºÐ½Ð°
+		// Подготвка содержимого окна
 		prepare_body: function(D, $this) {
 
-			// ÐžÐ±Ñ€Ð°Ð±Ð¾Ñ‚Ñ‡Ð¸Ðº Ð·Ð°ÐºÑ€Ñ‹Ñ‚Ð¸Ñ
+			// Обработчик закрытия
 			$('.arcticmodal-close', D.body).unbind('click.arcticmodal').bind('click.arcticmodal', function() {
 				$this.arcticmodal('close');
 				return false;
@@ -128,7 +128,7 @@
 		},
 
 
-		// Ð˜Ð½Ð¸Ñ†Ð¸Ð°Ð»Ð¸Ð·Ð°Ñ†Ð¸Ñ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°
+		// Инициализация элемента
 		init_el: function($this, options) {
 			var D = $this.data('arcticmodal');
 			if (D) return;
@@ -153,26 +153,26 @@
 				D.body.html($this);
 			}
 
-			// ÐŸÐ¾Ð´Ð³Ð¾Ñ‚Ð¾Ð²ÐºÐ° ÑÐ¾Ð´ÐµÑ€Ð¶Ð¸Ð¼Ð¾Ð³Ð¾
+			// Подготовка содержимого
 			modal.prepare_body(D, $this);
 
-			// Ð—Ð°ÐºÑ€Ñ‹Ñ‚Ð¸Ðµ Ð¿Ñ€Ð¸ ÐºÐ»Ð¸ÐºÐµ Ð½Ð° overlay
+			// Закрытие при клике на overlay
 			if (D.closeOnOverlayClick)
 				D.overlay.block.add(D.container.block).click(function(e) {
 					if (utils.isEventOut($('>*', D.body), e))
 						$this.arcticmodal('close');
 				});
 
-			// Ð—Ð°Ð¿Ð¾Ð¼Ð½Ð¸Ð¼ Ð½Ð°ÑÑ‚Ñ€Ð¾Ð¹ÐºÐ¸
+			// Запомним настройки
 			D.container.block.data('arcticmodalParentEl', $this);
 			$this.data('arcticmodal', D);
 			modals = $.merge(modals, $this);
 
-			// ÐŸÐ¾ÐºÐ°Ð·Ð°Ñ‚ÑŒ
+			// Показать
 			$.proxy(actions.show, $this)();
 			if (D.type=='html') return $this;
 
-			// Ajax-Ð·Ð°Ð³Ñ€ÑƒÐ·ÐºÐ°
+			// Ajax-загрузка
 			if (D.ajax.beforeSend!=undefined) {
 				var fn_beforeSend = D.ajax.beforeSend;
 				delete D.ajax.beforeSend;
@@ -196,7 +196,7 @@
 				},
 				success: function(responce) {
 
-					// Ð¡Ð¾Ð±Ñ‹Ñ‚Ð¸Ðµ Ð¿Ð¾ÑÐ»Ðµ Ð·Ð°Ð³Ñ€ÑƒÐ·ÐºÐ¸ Ð´Ð¾ Ð¿Ð¾ÐºÐ°Ð·Ð° ÑÐ¾Ð´ÐµÑ€Ð¶Ð¸Ð¼Ð¾Ð³Ð¾
+					// Событие после загрузки до показа содержимого
 					$this.trigger('afterLoading');
 					D.afterLoading(D, $this, responce);
 
@@ -207,14 +207,14 @@
 					}
 					modal.prepare_body(D, $this);
 
-					// Ð¡Ð¾Ð±Ñ‹Ñ‚Ð¸Ðµ Ð¿Ð¾ÑÐ»Ðµ Ð·Ð°Ð³Ñ€ÑƒÐ·ÐºÐ¸ Ð¿Ð¾ÑÐ»Ðµ Ð¾Ñ‚Ð¾Ð±Ñ€Ð°Ð¶ÐµÐ½Ð¸Ñ ÑÐ¾Ð´ÐµÑ€Ð¶Ð¸Ð¼Ð¾Ð³Ð¾
+					// Событие после загрузки после отображения содержимого
 					$this.trigger('afterLoadingOnShow');
 					D.afterLoadingOnShow(D, $this, responce);
 
 				},
 				error: function() {
 
-					// Ð¡Ð¾Ð±Ñ‹Ñ‚Ð¸Ðµ Ð¿Ñ€Ð¸ Ð¾ÑˆÐ¸Ð±ÐºÐµ Ð·Ð°Ð³Ñ€ÑƒÐ·ÐºÐ¸
+					// Событие при ошибке загрузки
 					$this.trigger('errorLoading');
 					D.errorLoading(D, $this);
 
@@ -236,13 +236,13 @@
 			}, D.ajax);
 			D.ajax_request = $.ajax(o);
 
-			// Ð—Ð°Ð¿Ð¾Ð¼Ð½Ð¸Ñ‚ÑŒ Ð½Ð°ÑÑ‚Ñ€Ð¾Ð¹ÐºÐ¸
+			// Запомнить настройки
 			$this.data('arcticmodal', D);
 
 		},
 
 
-		// Ð˜Ð½Ð¸Ñ†Ð¸Ð°Ð»Ð¸Ð·Ð°Ñ†Ð¸Ñ
+		// Инициализация
 		init: function(options) {
 			options = $.extend(true, {}, default_options, options);
 			if ($.isFunction(this)) {
@@ -287,7 +287,7 @@
 	var actions = {
 
 
-		// ÐŸÐ¾ÐºÐ°Ð·Ð°Ñ‚ÑŒ
+		// Показать
 		show: function() {
 			var $this = modal.getParentEl(this);
 			if ($this===false) {
@@ -296,13 +296,13 @@
 			}
 			var D = $this.data('arcticmodal');
 
-			// Ð”Ð¾Ð±Ð°Ð²Ð¸Ñ‚ÑŒ overlay Ð¸ container
+			// Добавить overlay и container
 			D.overlay.block.hide();
 			D.container.block.hide();
 			$('BODY').append(D.overlay.block);
 			$('BODY').append(D.container.block);
 
-			// Ð¡Ð¾Ð±Ñ‹Ñ‚Ð¸Ðµ
+			// Событие
 			D.beforeOpen(D, $this);
 			$this.trigger('beforeOpen');
 
@@ -316,13 +316,13 @@
 					D.wrap.css('marginRight', (w2 - w1) + 'px');
 			}
 
-			// Ð¡ÐºÑ€Ñ‹Ñ‚ÑŒ Ð¿Ñ€ÐµÐ´Ñ‹Ð´ÑƒÑ‰Ð¸Ðµ Ð¾Ð²ÐµÑ€Ð»ÐµÐ¸
+			// Скрыть предыдущие оверлеи
 			modals.not($this).each(function() {
 				var d = $(this).data('arcticmodal');
 				d.overlay.block.hide();
 			});
 
-			// ÐŸÐ¾ÐºÐ°Ð·Ð°Ñ‚ÑŒ
+			// Показать
 			modal.transition(D.overlay.block, 'show', modals.length>1 ? {type: 'none'} : D.openEffect);
 			modal.transition(D.container.block, 'show', modals.length>1 ? {type: 'none'} : D.openEffect, function() {
 				D.afterOpen(D, $this);
@@ -333,7 +333,7 @@
 		},
 
 
-		// Ð—Ð°ÐºÑ€Ñ‹Ñ‚ÑŒ
+		// Закрыть
 		close: function() {
 			if ($.isFunction(this)) {
 				modals.each(function() {
@@ -348,11 +348,11 @@
 					}
 					var D = $this.data('arcticmodal');
 
-					// Ð¡Ð¾Ð±Ñ‹Ñ‚Ð¸Ðµ Ð¿ÐµÑ€ÐµÐ´ Ð·Ð°ÐºÑ€Ñ‹Ñ‚Ð¸ÐµÐ¼
+					// Событие перед закрытием
 					if (D.beforeClose(D, $this)===false) return;
 					$this.trigger('beforeClose');
 
-					// ÐŸÐ¾ÐºÐ°Ð·Ð°Ñ‚ÑŒ Ð¿Ñ€ÐµÐ´Ñ‹Ð´ÑƒÑ‰Ð¸Ðµ Ð¾Ð²ÐµÑ€Ð»ÐµÐ¸
+					// Показать предыдущие оверлеи
 					modals.not($this).last().each(function() {
 						var d = $(this).data('arcticmodal');
 						d.overlay.block.show();
@@ -361,11 +361,11 @@
 					modal.transition(D.overlay.block, 'hide', modals.length>1 ? {type: 'none'} : D.closeEffect);
 					modal.transition(D.container.block, 'hide', modals.length>1 ? {type: 'none'} : D.closeEffect, function() {
 
-						// Ð¡Ð¾Ð±Ñ‹Ñ‚Ð¸Ðµ Ð¿Ð¾ÑÐ»Ðµ Ð·Ð°ÐºÑ€Ñ‹Ñ‚Ð¸Ñ
+						// Событие после закрытия
 						D.afterClose(D, $this);
 						$this.trigger('afterClose');
 
-						// Ð•ÑÐ»Ð¸ Ð½Ðµ ÐºÐ»Ð¾Ð½Ð¸Ñ€Ð¾Ð²Ð°Ð»Ð¸ - Ð²ÐµÑ€Ð½Ñ‘Ð¼ Ð½Ð° Ð¼ÐµÑÑ‚Ð¾
+						// Если не клонировали - вернём на место
 						if (!D.clone)
 							$('#arcticmodalReserve' + D.modalID).replaceWith(D.body.find('>*'));
 
@@ -389,7 +389,7 @@
 		},
 
 
-		// Ð£ÑÑ‚Ð°Ð½Ð¾Ð²Ð¸Ñ‚ÑŒ Ð¾Ð¿Ñ†Ð¸Ð¸ Ð¿Ð¾-ÑƒÐ¼Ð¾Ð»Ñ‡Ð°Ð½Ð¸ÑŽ
+		// Установить опции по-умолчанию
 		setDefault: function(options) {
 			$.extend(true, default_options, options);
 		}
@@ -403,7 +403,7 @@
 	});
 
 
-	// Ð—Ð°ÐºÑ€Ñ‹Ñ‚Ð¸Ðµ Ð¿Ñ€Ð¸ Ð½Ð°Ð¶Ð°Ñ‚Ð¸Ð¸ Escape
+	// Закрытие при нажатии Escape
 	$(document).bind('keyup.arcticmodal', function(e) {
 		var m = modals.last();
 		if (!m.length) return;

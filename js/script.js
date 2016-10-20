@@ -244,3 +244,13 @@ $('.owl-carousel2').owlCarousel({
 $('body').on('click touchstart', function() {
     $(".navbar-collapse").collapse('hide');
 });
+
+$('input[type=text]').on('click touchstart', function() {
+    $("input[type=text]").css({'color': '#000'}, 100);
+});
+$("#number-input").on('click touchstart', function() {
+    $("#number-input").css({'color': '#FFF'}, 100);
+});
+$("input[id^='form-phone']").on('click touchstart', function() {
+    $("input[id^='form-phone']").css({'color': '#000'}, 100);
+});
